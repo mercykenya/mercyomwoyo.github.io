@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Mercy Omwoyo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="scroll-progress"></div>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="accessibility-controls">
+            <div class="font-size-adjuster">
+                <button id="decrease-font" aria-label="Decrease font size">A-</button>
+                <button id="increase-font" aria-label="Increase font size">A+</button>
+            </div>
+            <div class="font-type-adjuster">
+                <select id="font-type" aria-label="Change font type">
+                    <option value="sans-serif">Sans-serif</option>
+                    <option value="serif">Serif</option>
+                    <option value="monospace">Monospace</option>
+                </select>
+            </div>
+            <div class="theme-switcher">
+                <button id="light-theme" aria-label="Switch to light theme">Light</button>
+                <button id="dark-theme" aria-label="Switch to dark theme">Dark</button>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="jobs.html">Job Opportunities</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <article class="about-section">
+            <h1>About Me</h1>
+
+            <section class="about-content">
+                <img src="Images/profile_optimized.png" alt="Mercy Omwoyo" class="profile-image">
+                <div class="about-text">
+                    <p class="intro">I am Mercy Omwoyo, a passionate Content Developer and Student Researcher at
+                        Northwestern University, pursuing a combined Bachelor and Master degree in Computer Science with
+                        a Design Certificate from the Segal Design Institute. I am set to graduate in December 2024.</p>
+                </div>
+            </section>
+
+            <section class="skills-section">
+                <h2>
+                    Skills
+                    <button id="toggle-skills" aria-expanded="false" aria-controls="skills-list">
+                        <span class="sr-only">Toggle Skills List</span>
+                        <span aria-hidden="true">▼</span>
+                    </button>
+                </h2>
+                <ul id="skills-list" hidden>
+                    <li>Web Development (HTML, CSS, JavaScript)</li>
+                    <li>React</li>
+                    <li>Python</li>
+                    <li>UX Design</li>
+                    <li>AI & Machine Learning</li>
+                </ul>
+            </section>
+
+            <section class="experience-section">
+                <h2>Professional Experience</h2>
+                <article>
+                    <h3>Content Developer at Digital Youth Network (DYN)</h3>
+                    <p>I design and implement innovative STEAM curricula, programs, and camps for young people across
+                        Chicago. I collaborate with an interdisciplinary team to create interactive activities and
+                        projects using the TunePad platform, a coding environment that enables learners to produce music
+                        and sound.</p>
+                </article>
+                <article>
+                    <h3>Student Researcher at TIDAL Lab</h3>
+                    <p>In my role at the Technology Interaction Design and Learning (TIDAL) Lab, I work on developing
+                        and evaluating educational technologies. I am passionate about leveraging technology, UX, and
+                        learning science principles to craft engaging, effective learning experiences.</p>
+                </article>
+            </section>
+
+            <section class="interests-section">
+                <h2>Interests and Future Goals</h2>
+                <p>My interests lie in the potential of AI, machine learning, and VR to create more adaptive,
+                    immersive, and personalized user experiences. I am always eager to learn from others and explore
+                    new possibilities for innovation and impact in educational technology.</p>
+            </section>
+        </article>
+    </main>
+
+
+    <footer>
+        <p><a href="https://github.com/mercykenya" target="_blank">GitHub</a> | <a
+                href="https://www.linkedin.com/in/mercyomwoyo/" target="_blank">LinkedIn</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
