@@ -2,7 +2,7 @@
   "name": "react-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mercyomwoyo.github.io",
+  "homepage": "https://mercyomwoyo.com/react",
   "dependencies": {
     "@codemirror/lang-javascript": "^6.2.2",
     "@codemirror/lang-python": "^6.1.6",
