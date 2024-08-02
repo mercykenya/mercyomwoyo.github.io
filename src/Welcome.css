@@ -1,0 +1,25 @@
+/* src/Welcome.css */
+.Welcome {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .Welcome h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .Welcome p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .Welcome ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .Welcome li {
+    margin-bottom: 10px;
+  }
+  
