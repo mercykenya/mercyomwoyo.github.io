@@ -1,93 +1,622 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercy Omwoyo - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mercy Omwoyo - Educational Technology Innovator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <div id="scroll-progress"></div>
     <header>
-        <div class="accessibility-controls">
-            <div class="font-size-adjuster">
-                <button id="decrease-font" aria-label="Decrease font size">A-</button>
-                <button id="increase-font" aria-label="Increase font size">A+</button>
+        <nav class="container">
+            <div class="logo">Omwoyo.dev</div>
+            <div class="nav-controls">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <div class="font-type-adjuster">
-                <select id="font-type" aria-label="Change font type">
-                    <option value="sans-serif">Sans-serif</option>
-                    <option value="serif">Serif</option>
-                    <option value="monospace">Monospace</option>
-                </select>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </div>
-            <div class="theme-switcher">
-                <button id="light-theme" aria-label="Switch to light theme">Light</button>
-                <button id="dark-theme" aria-label="Switch to dark theme">Dark</button>
-            </div>
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="jobs.html">Job Opportunities</a></li>
-            </ul>
         </nav>
     </header>
-    <main>
-        <section class="hero">
-            <img src="profile_optimized.png" alt="Mercy Omwoyo" class="profile-image">
-            <h1>Mercy Omwoyo</h1>
-            <p class="tagline">Educational Technology Innovator | BA/MS Computer Science Student</p>
-        </section>
-        <section class="card-container">
-            <div class="card">
-                <h2>Passion for EdTech</h2>
-                <p>Dedicated to leveraging technology to create engaging, effective learning experiences. Exploring the
-                    potential of AI, machine learning, and VR in education.</p>
+
+    <section id="home" class="section hero">
+        <div class="container">
+            <h1>
+                <span class="accent">&lt;</span>
+                Mercy
+                <span class="accent">&gt;</span>
+            </h1>
+            <p>
+                <span class="ignite">Igniting minds, one byte at a time:</span><br>
+                Harnessing AI, ML, and the cloud<br>
+                to redefine the future of education.
+            </p>
+            <a href="#about" class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <div class="intro-text">
+                <span>Hi! I'm Mercy </span>
+                <span class="remaining-text">Omwoyo a Computer Science graduate passionate about blending technology and education to unlock new possibilities in learning. My fascination lies in understanding systems ranging from algorithms to user behaviors.</span>
+              </div>
+              <div class="interests-grid">
+                <div class="interest-card">
+                  <div class="interest-header">
+                    <i class="fas fa-code"></i>
+                    <h3>Software Engineering</h3>
+                  </div>
+                  <p>Building robust systems and elegant solutions through distributed systems and machine learning algorithms.</p>
+                </div>
+                <div class="interest-card">
+                  <div class="interest-header">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Design</h3>
+                  </div>
+                  <p>Crafting intuitive user experiences and transforming complex technical problems into accessible solutions.</p>
+                </div>
+                <div class="interest-card">
+                  <div class="interest-header">
+                    <i class="fas fa-flask"></i>
+                    <h3>Research</h3>
+                  </div>
+                  <p>Exploring educational technologies and investigating ways to make digital experiences more inclusive and effective.</p>
+                </div>
+              </div>
+              <p class="details">
+                From designing intuitive user interfaces to implementing robust backend systems, I thrive at the intersection of creativity and engineering. Through research and practical projects, I've worked to make computer science education more engaging and accessible, especially for underrepresented groups. My goal is to bridge the gap between theoretical innovation and practical solutions that make a tangible impact in classrooms and beyond.
+              </p>
+              <p class="mission">
+                Whether collaborating on interdisciplinary research, designing cutting-edge tools, or building scalable digital products, I'm driven by a simple yet ambitious mission: to harness the power of technology to democratize education and inspire the next generation of learners and creators.
+              </p>
             </div>
-            <div class="card">
-                <h2>Skills & Expertise</h2>
-                <ul>
-                    <li>Web Development (Python, JavaScript, React)</li>
-                    <li>UX Design & Human-Centered Approach</li>
-                    <li>AI & Machine Learning Applications</li>
-                    <li>Curriculum Development</li>
-                </ul>
+            <div class="skills-container">
+                <div class="skills-section" data-category="technical">
+                    <h3 class="skills-heading">Technical Skills</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript/React</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Distributed Systems</span>
+                    </div>
+                </div>
+
+                <div class="skills-section" data-category="design">
+                    <h3 class="skills-heading">Design Skills</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">UX/UI Design</span>
+                        <span class="skill-tag">User Research</span>
+                        <span class="skill-tag">Prototyping</span>
+                        <span class="skill-tag">Design Systems</span>
+                    </div>
+                </div>
+
+                <div class="skills-section" data-category="research">
+                    <h3 class="skills-heading">Research Areas</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Educational Tech</span>
+                        <span class="skill-tag">HCI</span>
+                        <span class="skill-tag">ML Applications</span>
+                        <span class="skill-tag">Accessibility</span>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h2>Current Focus</h2>
-                <p>Content Developer at Digital Youth Network, creating innovative STEAM curricula and programs. Student
-                    Researcher at TIDAL Lab, developing and evaluating educational technologies.</p>
+        </div>
+     </div>
+    </section>
+
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            
+            <div class="experience-grid">
+                <!-- Research Card -->
+                <div class="experience-card">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <span class="terminal-title">student_researcher.sh</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="role-header">
+                            <div class="role-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div class="role-info">
+                                <h3>Student Researcher</h3>
+                                <h4>TIDAL Lab, Northwestern University</h4>
+                                <span class="period">Jan 2024 - Present</span>
+                            </div>
+                        </div>
+                        <div class="terminal-body">
+                            <p class="command">$ cat responsibilities.md</p>
+                            <ul class="task-list">
+                                <li>Designing and evaluating innovative educational technologies</li>
+                                <li>Developing coding platforms and interactive installations</li>
+                                <li>Conducting user research and impact analysis</li>
+                            </ul>
+                            <p class="command">$ ls tech-stack/</p>
+                            <div class="tech-stack">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">React</span>
+                                <span class="tech-pill">Research</span>
+                                <span class="tech-pill">Data Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Teaching Card -->
+                <div class="experience-card">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <span class="terminal-title">cs_tutor.sh</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="role-header">
+                            <div class="role-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div class="role-info">
+                                <h3>Computer Science Tutor</h3>
+                                <h4>Juni Learning</h4>
+                                <span class="period">May 2023 - Present</span>
+                            </div>
+                        </div>
+                        <div class="terminal-body">
+                            <p class="command">$ cat teaching.md</p>
+                            <ul class="task-list">
+                                <li>One-on-one tutoring in computer science</li>
+                                <li>Teaching Python, Java, and web development</li>
+                                <li>Creating personalized learning plans</li>
+                            </ul>
+                            <p class="command">$ ls skills/</p>
+                            <div class="tech-stack">
+                                <span class="tech-pill">Teaching</span>
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">Java</span>
+                                <span class="tech-pill">Web Dev</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Development Card -->
+                <div class="experience-card">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <span class="terminal-title">content_dev.sh</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="role-header">
+                            <div class="role-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="role-info">
+                                <h3>Content Developer</h3>
+                                <h4>Northwestern University</h4>
+                                <span class="period">Feb 2024 - Jul 2024</span>
+                            </div>
+                        </div>
+                        <div class="terminal-body">
+                            <p class="command">$ cat projects.md</p>
+                            <ul class="task-list">
+                                <li>Developing STEAM curricula and programs</li>
+                                <li>Creating interactive TunePad activities</li>
+                                <li>Designing educator training programs</li>
+                            </ul>
+                            <p class="command">$ ls technologies/</p>
+                            <div class="tech-stack">
+                                <span class="tech-pill">Ed Tech</span>
+                                <span class="tech-pill">STEAM</span>
+                                <span class="tech-pill">TunePad</span>
+                                <span class="tech-pill">Training</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h2>Academic Journey</h2>
-                <p>Pursuing a combined BA/MS in Computer Science at Northwestern University, with a Design Certificate
-                    from the Segal Design Institute. Expected graduation: December 2024.</p>
+        </div>
+    </section>
+
+   <section id="projects" class="projects">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        
+        <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="software">Software Engineering</button>
+            <button class="filter-btn" data-filter="interactive">Interactive Art</button>
+            <button class="filter-btn" data-filter="research">Research</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+        </div>
+
+    <div class="projects-grid">
+
+            <!-- Study Buddy Finder -->
+            <div class="project-card" data-category="software">
+                <div class="project-header">
+                    <div class="project-type">Full Stack</div>
+                    <span class="status-badge active">Live</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Study Buddy Finder</h3>
+                    <p class="project-description">
+                        Northwestern University study group matching platform with intelligent course matching and scheduling
+                    </p>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <span>500+ Active Users</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-calendar"></i>
+                            <span>Smart Scheduling</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-comments"></i>
+                            <span>Real-time Chat</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Tailwind</span>
+                    </div>
+                    <div class="project-resources">
+                        <a href="https://nu-study-buddy-finder-7co6.vercel.app" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/mercykenya/nu-study-buddy-finder" class="resource-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
             </div>
-        </section>
-        <section class="cta">
-            <h2>Let's Connect!</h2>
-            <p>Interested in innovative educational technology or want to collaborate? Check out my projects or get in
-                touch!</p>
-            <div class="cta-buttons">
-                <a href="projects.html" class="btn">View Projects</a>
-                <a href="contact.html" class="btn">Contact Me</a>
+            <!-- ThriftNU Project -->
+            <div class="project-card" data-category="software">
+                <div class="project-header">
+                    <div class="project-type">Full Stack</div>
+                    <span class="status-badge">In Development</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">ThriftNU</h3>
+                    <p class="project-description">
+                        Marketplace platform for Northwestern University community to buy and sell used course materials and items
+                    </p>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <i class="fas fa-store"></i>
+                            <span>Secure Marketplace</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>Direct Exchange</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-user-shield"></i>
+                            <span>Verified Users</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Material-UI</span>
+                        <span class="tech-tag">Node.js</span>
+                    </div>  
+                    <div class="project-resources">
+                        <a href="https://thriftnu-59202.web.app" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/mercykenya" class="resource-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div> 
+                </div>
             </div>
-        </section>
-    </main>
+            <!-- Design Projects -->
+            <!-- LinkedIn AI Editor Assistant -->
+            <div class="project-card" data-category="design">
+                <div class="project-header">
+                    <div class="project-type">Product Design</div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">LinkedIn AI Editor Assistant</h3>
+                    <p class="project-description">
+                        AI-powered content safety tool prototype for LinkedIn's 900M+ users, enhancing creator content quality
+                    </p>
+                    <div class="metrics-grid">
+                        <div class="metric">
+                            <i class="fas fa-users"></i>
+                            <span>136+ User Studies</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-clipboard-check"></i>
+                            <span>54 Concept Tests</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-building"></i>
+                            <span>40% Fortune 500 Impact</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Figma</span>
+                        <span class="tech-tag">User Research</span>
+                        <span class="tech-tag">Prototyping</span>
+                    </div>
+                    <div class="project-resources">
+                        <a href="https://www.figma.com/design/XQ6tkXUHtEA1gUQtnryrNW/" class="resource-link" target="_blank">
+                            <i class="fas fa-window-maximize"></i>
+                            View Prototype
+                        </a>
+                        <a href="https://www.canva.com/design/DAGFVk5d958/" class="resource-link" target="_blank">
+                            <i class="fas fa-file-powerpoint"></i>
+                            View Presentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ostrich Pillow Redesign -->
+            <div class="project-card" data-category="design">
+                <div class="project-header">
+                    <div class="project-type">Industrial Design</div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Ostrich Pillow Redesign</h3>
+                    <p class="project-description">
+                        3-in-1 travel comfort solution with innovative volume reduction design
+                    </p>
+                    <div class="metrics-grid">
+                        <div class="metric">
+                            <i class="fas fa-compress-alt"></i>
+                            <span>40% Volume Reduction</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-users"></i>
+                            <span>15 User Studies</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-cube"></i>
+                            <span>5 Prototypes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+             
+            <!-- Interactive Art Projects -->
+            <!-- Face Tracking Art Project -->
+            <div class="project-card" data-category="interactive">
+                <div class="project-header">
+                    <div class="project-type">Computer Vision Art</div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Face Tracking Masks</h3>
+                    <p class="project-description">
+                        Interactive face masks using computer vision and generative art
+                    </p>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <i class="fas fa-camera"></i>
+                            <span>Real-time Tracking</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Voronoi Art</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-magic"></i>
+                            <span>Particle Effects</span>
+                        </div>
+                    </div>
+                
+                    <div class="tech-stack">
+                        <span class="tech-tag">P5.js</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">WebGL</span>
+                    </div>
+                    <div class="project-resources">
+                        <a href="https://mercyomwoyo2024-a8.glitch.me" class="resource-link" target="_blank">
+                            <i class="fas fa-play"></i>
+                            Live Demo
+                        </a>
+                        <!-- <a href="#" class="resource-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Hand Gesture Sound Installation -->
+            <div class="project-card" data-category="interactive">
+                <div class="project-header">
+                    <div class="project-type">Gesture Recognition Art</div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Hand Gesture Sound Installation</h3>
+                    <p class="project-description">
+                        Interactive sound experience powered by hand gesture recognition and cultural symbolism
+                    </p>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <i class="fas fa-hand-paper"></i>
+                            <span>Gesture Detection</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-music"></i>
+                            <span>Sound Synthesis</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-smile"></i>
+                            <span>Emoji Integration</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">TensorFlow.js</span>
+                        <span class="tech-tag">Web Audio API</span>
+                        <span class="tech-tag">Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Projects -->
+            <!-- D65 Research Initiative -->
+            <div class="project-card" data-category="research">
+                <div class="project-header">
+                    <div class="project-type">Education Research</div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">D65 Research Initiative</h3>
+                    <p class="project-description">
+                        Research project focused on improving educational outcomes through technology integration and curriculum development
+                    </p>
+                    <div class="metrics-grid">
+                        <div class="feature">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>EdTech Integration</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Learning Analytics</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <span>Student Impact</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Research Methods</span>
+                        <span class="tech-tag">Data Analysis</span>
+                        <span class="tech-tag">EdTech</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Digital Youth Network - TunePad Curriculum -->
+            <div class="project-card" data-category="research">
+                <div class="project-header">
+                    <div class="project-type">Curriculum Development</div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">DYN TunePad Curriculum</h3>
+                    <p class="project-description">
+                        Innovative STEAM curricula and programs for Chicago youth using the TunePad platform
+                    </p>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <i class="fas fa-music"></i>
+                            <span>Music Technology</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-code"></i>
+                            <span>Creative Coding</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>STEAM Education</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">TunePad</span>
+                        <span class="tech-tag">Curriculum Design</span>
+                        <span class="tech-tag">Educational Technology</span>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Have a Question</h2>
+            <p class="contact-subtitle">Or just want to discuss a project? Connect with me using any of the following options</p>
+    
+            <div class="contact-grid">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/mercyomwoyo/" class="social-link" target="_blank">
+                        <div class="icon-container">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <span class="link-text">Linkedin</span>
+                        <span class="hover-text">Let's connect professionally</span>
+                    </a>
+    
+                    <a href="https://github.com/mercykenya" class="social-link" target="_blank">
+                        <div class="icon-container">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <span class="link-text">Github</span>
+                        <span class="hover-text">Check out my code</span>
+                    </a>
+    
+    
+                    <a href="mailto:mercyomwoyo@gmail.com" class="social-link">
+                        <div class="icon-container">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <span class="link-text">mercyomwoyo@gmail.com</span>
+                        <span class="hover-text">Send me an email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <i class="toast-icon"></i>
+            <div class="toast-message"></div>
+        </div>
+        <div class="toast-progress"></div>
+    </div>
+
     <footer>
-        <p><a href="https://github.com/mercykenya" target="_blank">GitHub</a> | <a
-                href="https://www.linkedin.com/in/mercyomwoyo/" target="_blank">LinkedIn</a></p>
+        <div class="container">
+            <p>&copy; 2024 Mercy Omwoyo. Built with <span class="accent">❤️</span></p>
+        </div>
     </footer>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
     <script src="script.js"></script>
 </body>
-
 </html>
