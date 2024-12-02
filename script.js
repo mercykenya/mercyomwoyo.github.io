@@ -578,3 +578,4 @@ function toggleProcess(projectId) {
         overlay.classList.remove('active');
     });
 });
+

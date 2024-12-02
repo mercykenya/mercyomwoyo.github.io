@@ -1534,23 +1534,51 @@ Hover effect
 
 
 /* Navigation Buttons */
+/* Navigation Links */
 .nav-links {
     display: flex;
-    justify-content: center;
     gap: 2rem;
-    margin-top: 2rem;
-    
 }
+
 .nav-links a {
-    font-family: 'Fira Code', monospace;
-    font-size: 10rem;
+    color: var(--text);
     text-decoration: none;
-    color: var(--text-secondary);
+    font-size: 1.1rem; /* Increased from 1rem */
+    font-family: 'Fira Code', monospace;
     transition: color 0.3s ease;
-    }
-    .nav-links a:hover {
-    color: var(--primary);
+    position: relative;
 }
+
+/* For the Education section itself */
+.degree-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.5rem; /* Increased from 1.4rem */
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.university {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.2rem; /* Increased from 1.1rem */
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.period {
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem; /* Increased from 0.9rem */
+    color: var(--text-secondary);
+}
+
+.task-list li {
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    position: relative;
+    font-size: 1rem; /* Increased from 0.95rem */
+}
+
 /* CTA Button */
 .cta-buttons {
     display: flex;
@@ -2005,3 +2033,393 @@ header .container {
         font-size: 2rem;
     }
 }
+
+.education {
+    padding: 6rem 0;
+    background-color: var(--background);
+  }
+  
+  .education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .education-card {
+    background-color: var(--surface);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--surface-alt);
+    transition: all 0.3s ease;
+  }
+  
+  .education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .degree-info {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+  }
+  
+  .degree-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.4rem;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+  
+  .university {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .period {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+  
+  .terminal-body {
+    background-color: var(--surface-alt);
+    margin: 1rem;
+    padding: 1.25rem;
+    border-radius: 8px;
+  }
+  
+  .command {
+    color: var(--primary);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .task-list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+  
+  .task-list li {
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    position: relative;
+    font-size: 0.95rem;
+  }
+  
+  .task-list li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+  }
+  
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .tech-pill {
+    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-family: 'Fira Code', monospace;
+  }
+  
+  @media (max-width: 768px) {
+    .education-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .degree-title {
+      font-size: 1.2rem;
+    }
+    
+    .university {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Animation for cards */
+  .education-card {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+  }
+  
+  .education-card:nth-child(1) { animation-delay: 0.2s; }
+  .education-card:nth-child(2) { animation-delay: 0.4s; }
+
+
+  .personal-interests {
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: var(--surface);
+    border-radius: 12px;
+  }
+  
+  .interests-heading {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.8rem;
+    color: var(--text);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  
+  .interests-heading::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+  }
+  
+  .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .interest-card {
+    background-color: var(--surface-alt);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .interest-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .interest-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .interest-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .interest-card:hover .interest-image img {
+    transform: scale(1.05);
+  }
+  
+  .interest-content {
+    padding: 1.5rem;
+  }
+  
+  .interest-content h4 {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+  
+  .interest-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  
+  .fun-facts-terminal {
+    background-color: var(--surface-alt);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 2rem;
+  }
+  
+  .terminal-header {
+    background-color: var(--surface);
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .terminal-dots {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  
+  .dot:nth-child(1) { background-color: #ff5f56; }
+  .dot:nth-child(2) { background-color: #ffbd2e; }
+  .dot:nth-child(3) { background-color: #27c93f; }
+  
+  .terminal-content {
+    padding: 1.5rem;
+  }
+  
+  .command {
+    color: var(--primary);
+    font-family: 'Fira Code', monospace;
+    margin-bottom: 1rem;
+  }
+  
+  .facts-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .facts-list li {
+    color: var(--text-secondary);
+    font-family: 'Fira Code', monospace;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--surface);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .facts-list li:hover {
+    transform: translateX(10px);
+    color: var(--primary);
+  }
+  
+  @media (max-width: 768px) {
+    .interests-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .facts-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .interest-content h4 {
+      font-size: 1.2rem;
+    }
+  }
+
+  .aspirations-section {
+    padding: 6rem 0;
+    background-color: var(--background);
+  }
+  
+  .vision-terminal {
+    background-color: var(--surface);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 2rem;
+    border: 1px solid var(--surface-alt);
+  }
+  
+  .terminal-content {
+    padding: 2rem;
+  }
+  
+  .vision-card {
+    background-color: var(--surface-alt);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  .vision-card h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+  
+  .command {
+    color: var(--primary);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .vision-list {
+    list-style: none;
+  }
+  
+  .vision-list li {
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .vision-list li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+  }
+  
+  .impact-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .metric-card {
+    background-color: var(--surface-alt);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .metric-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .metric-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  
+  .metric-card h4 {
+    font-family: 'Space Mono', monospace;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .metric-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 768px) {
+    .terminal-content {
+      padding: 1rem;
+    }
+    
+    .vision-card {
+      padding: 1rem;
+    }
+    
+    .impact-metrics {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  

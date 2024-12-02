@@ -23,13 +23,107 @@
             </div>
             <div class="nav-links">
                 <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
+                
+                <div class="nav-item">
+                  <a href="#about">About</a>
+                  <div class="subnav">
+                    <a href="#background">Background</a>
+                    <a href="#skills">Technical Skills</a>
+                    <a href="#beyond-code">Beyond Code</a>            
+                  </div>
+                </div>
+                
+                <div class="nav-item">
+                  <a href="#education">Education</a>
+                </div>
+                
+                <div class="nav-item">
+                  <a href="#experience">Experience</a>
+                </div>
+                
+                <div class="nav-item">
+                  <a href="#projects">Projects</a>
+                </div>
+                
                 <a href="#contact">Contact</a>
-                <a href="https://drive.google.com/file/d/1saZKbg9h9Ar_CKkLOi_S2yg0znENlOi-/view?usp=sharing" target="_blank">Resume</a>
-            </div>
-            </div>
+                
+                <a href="https://drive.google.com/file/d/1saZKbg9h9Ar_CKkLOi_S2yg0znENlOi-/view?usp=sharing" target="_blank" class="resume-link">Resume</a>
+              </div>
+              
+              <style>
+              .nav-links {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+              }
+              
+              .nav-item {
+                position: relative;
+              }
+              
+              .nav-item:hover .subnav {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+              }
+              
+              .subnav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: var(--surface);
+                min-width: 200px;
+                padding: 0.5rem;
+                border-radius: 4px;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+                transition: all 0.3s ease;
+                border: 1px solid var(--surface-alt);
+              }
+              
+              .subnav a {
+                display: block;
+                padding: 0.5rem 1rem;
+                color: var(--text-secondary);
+                text-decoration: none;
+                transition: all 0.2s ease;
+              }
+              
+              .subnav a:hover {
+                color: var(--primary);
+                background: var(--surface-alt);
+              }
+              
+              /* .resume-link {
+                background: var(--primary);
+                color: var(--background);
+                padding: 0.5rem 1.5rem;
+                border-radius: 20px;
+                transition: all 0.3s ease;
+              }
+              
+              .resume-link:hover {
+                background: var(--primary-light);
+                transform: translateY(-2px);
+              } */
+              
+              @media (max-width: 768px) {
+                .nav-item {
+                  width: 100%;
+                }
+                
+                .subnav {
+                  position: static;
+                  opacity: 1;
+                  visibility: visible;
+                  transform: none;
+                  border: none;
+                  background: none;
+                  padding-left: 1rem;
+                }
+              }
+              </style>
         </nav>
     </header>
 
@@ -67,6 +161,7 @@
     <section id="about" class="about">
         <div class="container">
           <h2 class="section-title">About Me</h2>
+          <div id="background" class="about-text">
           <div class="about-content">
             <div class="about-text">
               <div class="intro-text">
@@ -103,6 +198,73 @@
                 Whether collaborating on interdisciplinary research, designing cutting-edge tools, or building scalable digital products, I'm driven by a simple yet ambitious mission: to harness the power of technology to democratize education and inspire the next generation of learners and creators.
               </p>
             </div>
+           </div>
+            <div class="personal-interests">
+                <div id="beyond-code" class="personal-interests">
+                <h3 class="interests-heading">Beyond Code</h3>
+                
+                <div class="interests-grid">
+                  <!-- Kenyan Heritage -->
+                  <div class="interest-card">
+                    <div class="interest-image">
+                      <img src="widlife.heic" alt="Coastal Kenya" />
+                    </div>
+                    <div class="interest-content">
+                      <h4>Kenyan Roots</h4>
+                      <p>Growing up in Kenya shaped my perspective on technology's role in bridging cultural and educational gaps. From sailing along the pristine coastal beaches to seeing wildlife in national parks, these experiences fuel my creative approach to problem-solving.</p>
+                    </div>
+                  </div>
+              
+                  <!-- Adventure & Exploration -->
+                  <div class="interest-card">
+                    <div class="interest-image">
+                      <img src="hiking.heic" alt="Hiking Trails" />
+                    </div>
+                    <div class="interest-content">
+                      <h4>Adventure Seeker</h4>
+                      <p>As a former member of the President's Award Club in Kenya (part of the Duke of Edinburgh's International Award), I developed a passion for exploration through challenging expeditions. Today, I continue this adventure by hiking mountainous trails with friends.</p>
+                    </div>
+                  </div>
+              
+                  <!-- STEAM & Music -->
+                  <div class="interest-card">
+                    <div class="interest-image">
+                      <img src="steam.HEIC" alt="STEAM Events" />
+                    </div>
+                    <div class="interest-content">
+                      <h4>Creative Expression</h4>
+                      <p>When I'm not coding, you'll find me engaging with STEAM pop-up events, sharing my passion for technology with others, or unwinding with my guitar. These creative outlets complement my technical work and keep me inspired.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+                <!-- Fun Facts Terminal -->
+                <div class="fun-facts-terminal">
+                  <div class="terminal-header">
+                    <div class="terminal-dots">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                    <span class="terminal-title">fun_facts.sh</span>
+                  </div>
+                  <div class="terminal-content">
+                    <div class="command">$ cat life_adventures.md</div>
+                    <ul class="facts-list">
+                        <li>🏆 Led expeditions in the President's Award Club, Kenya</li>
+                        <li>🌊 Adventured along the East African coastline, trying sailing and coastal activities</li>
+                        <li>🎸 Self-taught guitarist</li>
+                        <li>🏞️ Avid hiker in mountainous regions</li>
+                        <li>🦁 Wildlife enthusiast and safari explorer</li>
+                        <li>🔬 Active participant in STEAM community events</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            <div id="skills" class="skills-container">
+
             <div class="skills-container">
                 <div class="skills-section" data-category="technical">
                     <h3 class="skills-heading">Technical Skills</h3>
@@ -134,10 +296,87 @@
                     </div>
                 </div>
             </div>
+           </div>
         </div>
      </div>
     </section>
+    <!-- Education Section -->
+    <div id="education" class="section education">
+        <div class="container">
+        <h2 class="section-title">Education</h2>
+        
+        <div class="education-grid">
+            <!-- Masters Degree Card -->
+            <div id="masters" class="education-card">
+            <div class="education-card">
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                </div>
+                <span class="terminal-title">masters_degree.sh</span>
+            </div>
+            
+            <div class="card-content">
+                <div class="degree-info">
+                <h3 class="degree-title">Master of Science in Computer Science</h3>
+                <h4 class="university">Northwestern University</h4>
+                <span class="period">2024 - 2025</span>
+                </div>
+                
+                <div class="terminal-body">
+                <div class="command">$ cat program_details.md</div>
+                <ul class="task-list">
+                    <li>Advanced Computer Science curriculum</li>
+                    <li>Focus on AI and Machine Learning</li>
+                    <li>Research in Educational Technology</li>
+                </ul>
+                </div>
+            </div>
+            </div>
+           </div>
+            
+            <!-- Bachelors Degree Card -->
 
+            <div id="bachelors" class="education-card">
+            <div class="education-card">
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                </div>
+                <span class="terminal-title">bachelors_degree.sh</span>
+            </div>
+            
+            <div class="card-content">
+                <div class="degree-info">
+                <h3 class="degree-title">Bachelor of Science in Computer Science</h3>
+                <h4 class="university">Northwestern University</h4>
+                <span class="period">2021 - 2024</span>
+                </div>
+                
+                <div class="terminal-body">
+                <div class="command">$ cat program_details.md</div>
+                <ul class="task-list">
+                    <li>Computer Science major with Design Certificate</li>
+                    <li>Interdisciplinary approach combining technology and design</li>
+                    <li>Focus on Human-Computer Interaction and UX Design</li>
+                </ul>
+    
+                <div class="tech-stack">
+                    <span class="tech-pill">Computer Science</span>
+                    <span class="tech-pill">Design Certificate</span>
+                    <span class="tech-pill">HCI</span>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+    </div>
 
     <section id="experience" class="experience">
         <div class="container">
@@ -263,6 +502,65 @@
             </div>
         </div>
     </section>
+
+    <div class="aspirations-section">
+        <div class="container">
+          <h2 class="section-title">Future Ambitions</h2>
+          
+          <div class="vision-terminal">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <span class="terminal-title">future_vision.sh</span>
+            </div>
+            
+            <div class="terminal-content">
+              <div class="vision-card">
+                <h3>Research Vision</h3>
+                <div class="command">$ cat research_interests.md</div>
+                <ul class="vision-list">
+                  <li>Developing adaptive learning platforms powered by machine learning</li>
+                  <li>Creating personalized education systems that scale across cultures</li>
+                  <li>Integrating constructionist principles with analytics</li>
+                  <li>Building culturally responsive computing curricula</li>
+                </ul>
+              </div>
+      
+              <div class="vision-card">
+                <h3>Innovation Goals</h3>
+                <div class="command">$ cat innovation_roadmap.md</div>
+                <ul class="vision-list">
+                  <li>Design immersive learning environments that adapt to individual needs</li>
+                  <li>Develop technologies that transform abstract concepts into tangible experiences</li>
+                  <li>Create platforms that make programming accessible through creative expression</li>
+                  <li>Build tools that democratize access to quality computer science education</li>
+                </ul>
+              </div>
+      
+              <div class="impact-metrics">
+                <div class="metric-card">
+                  <span class="metric-icon">🎯</span>
+                  <h4>Education Impact</h4>
+                  <p>Transforming CS education through adaptive learning platforms</p>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-icon">🌏</span>
+                  <h4>Global Reach</h4>
+                  <p>Scaling personalized learning across cultural contexts</p>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-icon">🔬</span>
+                  <h4>Research Focus</h4>
+                  <p>Advancing the intersection of technology and education</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
    <section id="projects" class="projects">
     <div class="container">
