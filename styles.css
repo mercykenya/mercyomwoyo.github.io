@@ -1638,7 +1638,7 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    background: rgba(10, 25, 47, 0.85);
+    background: rgba(81, 105, 141, 0.85);
     backdrop-filter: blur(10px);
     z-index: 1000;
     height: 4.5rem;
