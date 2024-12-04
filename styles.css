@@ -65,7 +65,7 @@ h1, h2, h3, h4 {
     line-height: 1.2;
 }
 
-/* .section-title {
+.section-title {
     font-size: 2.5rem;
     margin-bottom: 3rem;
     position: relative;
@@ -81,45 +81,7 @@ h1, h2, h3, h4 {
     color: var(--primary);
     font-family: 'Fira Code', monospace;
 }
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 2rem;
-    width: 100px;
-    height: 2px;
-    background-color: var(--primary);
-} */
-
-
-
-
-/* Terminal-like Container */
-.terminal-container {
-    background-color: var(--surface-alt);
-    border-radius: 6px;
-    padding: 1rem;
-    margin: 1rem 0;
-}
-
-.terminal-header {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.terminal-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-
-    &:nth-child(1) { background-color: #ff5f56; }
-    &:nth-child(2) { background-color: #ffbd2e; }
-    &:nth-child(3) { background-color: #27c93f; }
-}
 /* Landing page */
-/* Hero Section Base */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -129,59 +91,6 @@ h1, h2, h3, h4 {
     position: relative;
     overflow: hidden;
 }
-
-/* Main Title Animation */
-.hero h1 {
-    font-size: 7rem;
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-/* MERCY Text Animation */
-.hero h1 {
-    animation: bounceLetters 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards,
-               colorCycle 5s ease-in-out infinite;
-}
-
-/* Accent Brackets */
-.hero .accent {
-    font-size: 7rem;
-    color: var(--primary);
-    display: inline-block;
-    animation: rotateAndBounce 3s ease-in-out infinite;
-}
-
-/* Tagline Animation */
-.hero p {
-    font-size: 1.8rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-}
-/* Hero Section Base */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem 0;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  /* Main Title Animation */
-  .hero h1 {
-    font-size: 7rem;
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
   /* MERCY Text Animation */
   .hero h1 {
     animation: bounceLetters 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards,
@@ -209,20 +118,20 @@ h1, h2, h3, h4 {
     display: inline-block;
     position: relative;
   }
-  
   .hero .ignite span {
     display: inline-block;
     opacity: 0;
-    animation: igniteSpell 4s ease-in-out infinite;
+    animation: igniteSpell 0.7s ease-in-out forwards;
     color: var(--text);
-  }
-  
+}
+
   .hero .ignite span:nth-child(1) { animation-delay: 0.1s; }
   .hero .ignite span:nth-child(2) { animation-delay: 0.2s; }
   .hero .ignite span:nth-child(3) { animation-delay: 0.3s; }
   .hero .ignite span:nth-child(4) { animation-delay: 0.4s; }
   .hero .ignite span:nth-child(5) { animation-delay: 0.5s; }
   .hero .ignite span:nth-child(6) { animation-delay: 0.6s; }
+  
  /* Hero Section Base */
 .hero {
   min-height: 100vh;
@@ -272,12 +181,6 @@ h1, h2, h3, h4 {
   position: relative;
 }
 
-.hero .ignite span {
-  display: inline-block;
-  opacity: 0;
-  animation: igniteSpell 4s ease-in-out infinite;
-  color: var(--text);
-}
 
 .hero .ignite span:nth-child(1) { animation-delay: 0.1s; }
 .hero .ignite span:nth-child(2) { animation-delay: 0.2s; }
@@ -307,50 +210,32 @@ h1, h2, h3, h4 {
 .hero .ignite span:nth-child(26) { animation-delay: 2.7s; }
 .hero .ignite span:nth-child(27) { animation-delay: 3.0s; }
 
-
-/* Add more selectors for each letter */
+.hero .ignite span {
+    display: inline-block;
+    opacity: 0;
+    animation: igniteSpell 0.7s ease-in-out forwards;
+    color: var(--text);
+}
 
 @keyframes igniteSpell {
-  0%, 100% {
-    opacity: 0;
-    transform: translateY(20px);
-    color: var(--text);
-  }
-  25%, 75% {
-    opacity: 1;
-    transform: translateY(0);
-    color: var(--primary);
-    text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(0);
-    color: var(--text);
-    text-shadow: none;
-  }
-}
-  /* Add more selectors for each letter */
-  
-  @keyframes igniteSpell {
-    0%, 100% {
-      opacity: 0;
-      transform: translateY(20px);
-      color: var(--text);
-    }
-    25%, 75% {
-      opacity: 1;
-      transform: translateY(0);
-      color: var(--primary);
-      text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        color: var(--text);
     }
     50% {
-      opacity: 1;
-      transform: translateY(0);
-      color: var(--text);
-      text-shadow: none;
+        opacity: 1;
+        transform: translateY(0);
+        color: var(--primary);
+        text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
     }
-  }
-
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        color: var(--text);
+        text-shadow: none;
+    }
+}
 /* Scroll Down Arrow */
 .scroll-arrow {
     position: absolute;
@@ -1639,7 +1524,7 @@ header {
     top: 0;
     left: 0;
     background: rgba(81, 105, 141, 0.85);
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
     z-index: 1000;
     height: 4.5rem;
     border-bottom: 2px solid rgba(100, 255, 218, 0.1);
@@ -1921,116 +1806,6 @@ header .container {
     .skill-tag {
         font-size: 0.85rem;
         padding: 0.4rem 0.8rem;
-    }
-}
-
-
-
-/* Animated Section Title */
-/* Animated Section Title */
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    position: relative;
-    display: inline-block;
-    padding-left: 2rem;
-    font-family: 'Space Mono', monospace;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typing 8s ease-in-out infinite;
-}
-
-/* Cursor style */
-.section-title::after {
-    content: '';
-    position: absolute;
-    top: 15%;
-    height: 70%;
-    width: 3px;
-    background-color: var(--primary);
-    animation: moveCursor 8s ease-in-out infinite,
-               blink 0.7s step-end infinite;
-}
-
-/* Arrow style with playful bounce */
-.section-title::before {
-    content: '>';
-    position: absolute;
-    left: 0;
-    color: var(--primary);
-    font-family: 'Fira Code', monospace;
-    animation: bounce 2s ease-in-out infinite;
-}
-
-/* Bottom line with wave effect */
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 2rem;
-    width: 100px;
-    height: 2px;
-    background-color: var(--primary);
-    animation: wave 4s ease-in-out infinite;
-}
-
-/* Smooth Animations */
-@keyframes typing {
-    0%, 100% {
-        width: 0;
-    }
-    20%, 80% {
-        width: 100%;
-    }
-}
-
-@keyframes moveCursor {
-    0%, 100% {
-        left: 0;
-    }
-    20%, 80% {
-        left: calc(100% - 3px);  /* Stop at end of text */
-    }
-}
-
-@keyframes blink {
-    from, to { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
-}
-
-@keyframes wave {
-    0%, 100% {
-        transform: scaleX(0) translateY(0);
-    }
-    50% {
-        transform: scaleX(1) translateY(-3px);
-    }
-}
-
-/* Base Style Enhancement */
-.section-title {
-    text-shadow: 2px 2px 8px rgba(100, 255, 218, 0.1);
-    transition: all 0.3s ease;
-}
-
-.section-title:hover {
-    text-shadow: 4px 4px 12px rgba(100, 255, 218, 0.2);
-    transform: translateY(-2px);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
     }
 }
 
